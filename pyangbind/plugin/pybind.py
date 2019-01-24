@@ -775,7 +775,7 @@ def get_children(ctx, fd, i_children, module, parent, path=str(), parent_cfg=Tru
 
     # 'container', 'module', 'list' and 'submodule' all have their own classes
     # generated.
-    if parent.keyword in ["container", "module", "list", "submodule", "input", "output", "rpc", "notification", "action"]:  # action here added for compatibility
+    if parent.keyword in ["container", "module", "list", "submodule", "input", "output", "rpc", "notification"]:
         if ctx.opts.split_class_dir:
             nfd.write("class %s(PybindBase):\n" % safe_name(parent.arg))
         else:
